@@ -25,20 +25,21 @@ class ComposeActivity : AppCompatActivity() {
 
             val tweetContent = etCompose.text.toString()
 
-            if(tweetContent.isEmpty())
-            {
-                Toast.makeText(this, "Empty tweets not allowed", Toast.LENGTH_SHORT).show()
-            }
-            else
-            if(tweetContent.length > 140)
-            {
-                Toast.makeText(this,"The Tweet is way too long!!!! Length is 140 characters", Toast.LENGTH_SHORT).show()
-            }
+           if(tweetContent.isEmpty())
+           {
+               Toast.makeText(this,"Empty tweet not allowed", Toast.LENGTH_SHORT)
+           }
+            else if (tweetContent.length > 140)
+           {
+                Toast.makeText(this, "This tweeet is too long. The character limit is 140", Toast.LENGTH_SHORT)
+           } else {
+               Toast.makeText(this,tweetContent, Toast.LENGTH_SHORT)
+           }
 
-            else {
-                Toast.makeText(this, tweetContent, Toast.LENGTH_SHORT).show()
-            }
 
+
+
+
+           }
         }
     }
-}

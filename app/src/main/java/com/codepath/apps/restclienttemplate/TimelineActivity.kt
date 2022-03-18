@@ -63,6 +63,12 @@ class TimelineActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.compose)
+        {
+            val intent = Intent(this,ComposeActivity::class.java)
+            startActivity(intent)
+
+        }
         return super.onOptionsItemSelected(item)
     }
 
